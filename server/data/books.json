@@ -1,0 +1,22 @@
+[
+    {
+      "_id": "664fa123abc456def7890123",
+      "bookName": "Clean Code",
+      "author": "Robert C. Martin",
+      "price": 450,
+      "category": "Programming",
+      "imageURL": "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg",
+      "description": "A handbook of agile software craftsmanship.",
+      "publishedDate": "2008-08-01T00:00:00.000Z"
+    },
+    {
+      "_id": "664fa124abc456def7890124",
+      "bookName": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen",
+      "price": 850,
+      "category": "Computer Science",
+      "imageURL": "https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg",
+      "description": "Comprehensive guide to algorithms.",
+      "publishedDate": "2009-07-31T00:00:00.000Z"
+    }
+]

@@ -1,0 +1,17 @@
+# node modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# environment variables
+.env
+
+# mac files
+.DS_Store
+
+# logs
+npm-debug.log*
+
+# optional (if you don't want JSON backups)
+# server/data/
+

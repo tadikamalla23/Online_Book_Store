@@ -1,0 +1,16 @@
+[
+    {
+      "_id": "664fa200abc456def7890125",
+      "name": "Robert C. Martin",
+      "emailId": "uncle.bob@example.com",
+      "contactNo": 9876543210,
+      "address": "Chicago, USA"
+    },
+    {
+      "_id": "664fa201abc456def7890126",
+      "name": "Thomas H. Cormen",
+      "emailId": "cormen@example.com",
+      "contactNo": 9876543211,
+      "address": "New Hampshire, USA"
+    }
+]

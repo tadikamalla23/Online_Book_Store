@@ -1,6 +1,5 @@
 import React from 'react';
 import './Books.css';
-import carousel1 from '../Images/carousel1.jpg';
 export default class Books extends React.Component{
     render(){
         return(

@@ -1,4 +1,6 @@
+
 import Axios from 'axios';
+
 const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:4000";
 export const search=(item)=>{
    return Axios.get(`${API_BASE_URL}/book/search/${item}`).then((itemList)=>{
@@ -116,6 +118,12 @@ export const getUser = (userName) => {
 
 export const updateUserDetails = (data) => {
   return Axios.put(`${API_BASE_URL}/user/updateDetails`, data)
+    .then(res => res.data)
+    .catch(err => ({ message: err.message }));
+};
+export const updateAuthor = (id, payload) => {
+    console.log("API CALL: updateAuthor", id, payload);
+  return Axios.put(`${API_BASE_URL}/book/updateAuthor/${id}`, payload)
     .then(res => res.data)
     .catch(err => ({ message: err.message }));
 };

@@ -59,42 +59,7 @@ router.get('/getBookByAuthor/:author',(req,res)=>{
         
     
 });
-// router.post('/addBook',async (req,res)=>{
-//     var existingAuthor=await author.findOne({name:req.body.author});
-//     if(!existingAuthor){
-//         var newAuthor=author({
-//             name:req.body.author,
-//             emailId:"unknown",
-//             contactNo:0,
-//             address:"unknown"
-//         });
-//         await newAuthor.save();
-//     }
 
-//     var existingCategory=await category.findOne({name:req.body.category});
-//     if(!existingCategory){
-//         var newCategory=category({name:req.body.category});
-//         await newCategory.save();
-//     }
-//     var newBook=books({
-//         bookName:req.body.bookName,
-//         author:req.body.author,
-//         price:req.body.price,
-//         category:req.body.category,
-//         imageURL:req.body.imageURL,
-//         description:req.body.description,
-//         publishedDate:req.body.date
-//     });
-   
-//     newBook.save().then(async(result)=>{
-//         if(result){
-//             await syncJsonData();
-//             res.send({message:true})
-//         }else{
-//             res.send({message:"couldnot save"});
-//         }
-//     }).catch(err=>res.send({message:"404 error"}));
-// });
 router.post('/addBook', async (req,res)=>{
     try{
         console.log("FULL BODY:", req.body);

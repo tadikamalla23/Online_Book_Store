@@ -1,0 +1,7 @@
+.viewBooks td,th{
+    text-align: center;
+    vertical-align: middle;
+}
+.viewBooks td{
+    font-size: 16px !important;
+}

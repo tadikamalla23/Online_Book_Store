@@ -1,0 +1,19 @@
+.carousel{
+    position: relative !important;
+    padding-right: 2px;    
+}
+.explorebtn{
+    border-bottom: 2px solid white;
+    padding: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.carousel-caption{
+    position:absolute !important;
+    top:250px;
+    text-align: left;    
+}
+.carousel-item >img{
+    opacity: 0.7;
+}
+

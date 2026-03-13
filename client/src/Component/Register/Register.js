@@ -75,8 +75,8 @@ class Register extends React.Component{
               break;
               case 'pincode': 
               errors.pincode = 
-                value.length < 6
-                  ? 'Pincode must be atleast 6 Numbers long!'
+                value.length < 5
+                  ? 'Pincode must be atleast 5 Numbers long!'
                   : '';
                 
               break;
@@ -146,21 +146,21 @@ class Register extends React.Component{
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
                                 <label htmlFor="firstName" className="float-left">First Name:</label>
-                                <input id="firstName" value={this.state.email} type="text" className="form-control" onChange={this.handleChange} placeholder="First Name" required/>
+                                <input id="firstName" value={this.state.firstName} type="text" className="form-control" onChange={this.handleChange} placeholder="First Name" required/>
                                 <div className="float-right error">
                                 {errors.firstName.length > 0 && 
                                     <span className='error'>{errors.firstName}</span>}</div>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="lastName" className="float-left">Last Name:</label>
-                                <input id="lastName" value={this.state.email} type="text" className="form-control" onChange={this.handleChange} placeholder="Last Name" required/>
+                                <input id="lastName" value={this.state.lastName} type="text" className="form-control" onChange={this.handleChange} placeholder="Last Name" required/>
                                 <div className="float-right error">
                                 {errors.lastName.length > 0 && 
                                     <span className='error'>{errors.lastName}</span>}</div>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="userName" className="float-left">User Name(Email):</label>
-                                <input id="userName" value={this.state.username} type="text" className="form-control" onChange={this.handleChange} placeholder="ex: abcdef@ghijk.xyz" required/>
+                                <input id="userName" value={this.state.userName} type="text" className="form-control" onChange={this.handleChange} placeholder="ex: abcdef@ghijk.xyz" required/>
                                 <div className="float-right error">
                                 {errors.userName.length > 0 && 
                                     <span className='error'>{errors.userName}</span>}</div>
@@ -180,6 +180,13 @@ class Register extends React.Component{
                                     <span className='error'>{errors.address}</span>}</div>
                             </div>
                             <div className="form-group">
+                                <label htmlFor="state" className="float-left">State:</label>
+                                <input id="state" value={this.state.state} type="text" className="form-control" onChange={this.handleChange} placeholder="State" required/>
+                                <div className="float-right error">
+                                {errors.state.length > 0 && 
+                                    <span className='error'>{errors.state}</span>}</div>
+                            </div>
+                            {/* <div className="form-group">
                             <label htmlFor="state" className="float-left">State:</label>
                                 <select id="state" value= {this.state.state} onChange={this.handleChange} className="form-control" required>
                                     <option>---Select a State---</option>
@@ -187,8 +194,15 @@ class Register extends React.Component{
                                     <option value = "Andhra Pradesh">Andhra Pradesh</option>
                                     <option value = "Tamil Nadu">Tamil Nadu</option>
                                 </select>                                
-                            </div>
+                            </div> */}
                             <div className="form-group">
+                                <label htmlFor="city" className="float-left">City:</label>
+                                <input id="city" value={this.state.city} type="text" className="form-control" onChange={this.handleChange} placeholder="City" required/>
+                                <div className="float-right error">
+                                {errors.city.length > 0 && 
+                                    <span className='error'>{errors.city}</span>}</div>
+                            </div>
+                            {/* <div className="form-group">
                             <label htmlFor="city" className="float-left">City:</label>
                                 <select id="city" value= {this.state.city} onChange={this.handleChange} className="form-control" required>
                                     <option>---Select a City---</option>
@@ -196,7 +210,7 @@ class Register extends React.Component{
                                     <option value = "Vizaq">Vizaq</option>
                                     <option value = "Chennai">Chennai</option>
                                 </select>
-                            </div>
+                            </div> */}
                             <div className="form-group">
                                 <label htmlFor="pincode" className="float-left">Pincode:</label>
                                 <input id="pincode" value={this.state.pincode} type="number" className="form-control" onChange={this.handleChange} placeholder="PinCode" required/>

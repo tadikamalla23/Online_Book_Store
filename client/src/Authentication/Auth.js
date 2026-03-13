@@ -1,4 +1,5 @@
 import Axios from 'axios';
+const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:4000";
 export default class auth{
 
     constructor(history){
@@ -18,7 +19,7 @@ export default class auth{
             city:city,
             pincode:pincode
         };
-        return Axios.post('http://localhost:4000/user/reg',data)
+        return Axios.post(`${API_BASE_URL}/user/reg`,data)
             .then((res)=>{ 
                 if(res.data.message===true){
                     alert('Data entered to db');
@@ -35,7 +36,7 @@ export default class auth{
     
      login=({userName,password})=>{
         const data={userName:userName,password:password};
-        return Axios.post('http://localhost:4000/user/login',data)
+        return Axios.post(`${API_BASE_URL}/user/login`,data)
             .then((res)=> {
             if(res.data.message === true)
             {

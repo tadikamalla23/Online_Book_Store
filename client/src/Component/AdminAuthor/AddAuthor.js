@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import axios from 'axios';
+import { Component } from "react";
 import Aux from '../../hoc/Auxiliary';
 import AdminNav from '../Admin/AdminNav';
 import Services from '../../Others/Services';
 import Footer from '../../Others/Footer';
 import Auth from '../../Authentication/Auth';
+import {addAuthor} from '../UserFunctions/UserFunctions';
  class AddAuthor extends Component{
      state={
         AuthorName: '',
@@ -36,18 +36,18 @@ import Auth from '../../Authentication/Auth';
             emailId: this.state.EmailID,
             address:this.state.Address
          };
-         axios.post(`http://localhost:4000/book/addAuthor`,payload)
+         addAuthor(payload)
          .then((res) => {
            this.resetUserInputs();
-            if(res.data.message===true){
+            if(res.message===true){
                this.setState({message:"Added"});
             }else{
-               this.setState({message:res.data.message}); 
+               this.setState({message:res.message}); 
             }
          })
          .catch((err) => {
              if(err)
-               this.setState({message:"404 error"});
+               this.setState({message:err.messsage});
          })
      }
      resetUserInputs=()=>{

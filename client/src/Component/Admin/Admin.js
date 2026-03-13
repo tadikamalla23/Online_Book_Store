@@ -18,7 +18,6 @@ export default class Admin extends React.Component{
             <div className="container-relative">
             <AdminNav logoutHandler={this.logoutHandler} />
             </div>
-            <marquee><h2>This is Admin Home</h2></marquee>
             <div className="container-fluid mr-3 ml-3">
             <Banner />
             </div>

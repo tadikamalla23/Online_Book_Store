@@ -1,47 +1,45 @@
-import React from "react";
-import Navbar from "../Navbar/Navbar";
-import LeftNavbar from "../Navbar/LeftNavbar";
-import Books from "../Books/Books";
-import "./Home.css";
-import Auth from "../../Authentication/Auth.js";
-import Aux from "../../hoc/Auxiliary.js";
-import Authors from "../Authors/Authors.js";
-import Services from "../../Others/Services.js";
-import Footer from "../../Others/Footer";
-import { addToCart, search } from "../UserFunctions/UserFunctions.js";
-import Banner from "../Banner/Banner.js";
-import {
-  getCartItems,
-  getBookByCategory,
-  getBookByAuthor,
-  getBooks,
-} from "../UserFunctions/UserFunctions.js";
-class Home extends React.Component {
-  state = {
-    searchItem: "",
-    books: [],
-    display: true,
-    result: [],
-    message: "",
-    displaySearch: true,
-    count: 0,
-  };
-  constructor(props) {
-    super(props);
-    this.auth = new Auth(this.props.history);
-  }
-  logoutHandler = () => {
-    this.setState({ count: 0 }, () => {
-      this.auth.logout();
-    });
-  };
-  resetHandler = () => {
-    this.setState({ result: [], message: "" });
-  };
-  changeHandler = (event) => {
-    event.preventDefault();
-    this.setState({ searchItem: event.target.value });
-  };
+import React from 'react';
+import Navbar from '../Navbar/Navbar';
+import LeftNavbar from '../Navbar/LeftNavbar';
+import Books from '../Books/Books';
+import './Home.css';
+import Auth from '../../Authentication/Auth.js';
+import Aux from '../../hoc/Auxiliary.js';
+import Authors from '../Authors/Authors.js';
+import Services from '../../Others/Services.js';
+import Footer from '../../Others/Footer';
+import {search} from '../UserFunctions/UserFunctions.js'
+import Banner from '../Banner/Banner.js';
+import Axios from 'axios';
+import {getCartItems,getBookByCategory,getBookByAuthor, addToCart, getBooks} from '../UserFunctions/UserFunctions.js';
+class Home extends React.Component{
+    state={searchItem:"",books:[],display:true,result:[],message:"",displaySearch:true,count:0};
+    constructor(props){
+        super(props);
+        this.auth=new Auth(this.props.history);
+    }
+    logoutHandler=()=>{
+        this.setState({count:0},()=>{this.auth.logout();})  
+    }
+    resetHandler=()=>{
+        this.setState({result:[],message:""});
+    }
+    changeHandler=(event)=>{
+        event.preventDefault();
+        this.setState({searchItem:event.target.value});
+    }
+    
+    addToCartHandler=(id)=>{
+        console.log(id);
+        Axios.post(`http://localhost:4000/cart/addBook?id=${id}&userName=${this.auth.getUserName()}`).then((res)=>{    
+            if(res.data.message===true){
+                    this.props.history.push(`/shoppingcart`);               
+                }else{
+                    this.setState({message: `Unable to add to cart please try again later`});
+                    alert(this.state.message);
+                }
+            });
+    }
 
   addToCartHandler = (id) => {
     console.log(id);

@@ -1,22 +1,178 @@
 [
-    {
-      "_id": "664fa123abc456def7890123",
-      "bookName": "Clean Code",
-      "author": "Robert C. Martin",
-      "price": 450,
-      "category": "Programming",
-      "imageURL": "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg",
-      "description": "A handbook of agile software craftsmanship.",
-      "publishedDate": "2008-08-01T00:00:00.000Z"
-    },
-    {
-      "_id": "664fa124abc456def7890124",
-      "bookName": "Introduction to Algorithms",
-      "author": "Thomas H. Cormen",
-      "price": 850,
-      "category": "Computer Science",
-      "imageURL": "https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg",
-      "description": "Comprehensive guide to algorithms.",
-      "publishedDate": "2009-07-31T00:00:00.000Z"
-    }
+  {
+    "_id": "69b46505502fb497d594e4bf",
+    "bookName": "Clean Code",
+    "author": "Robert C. Martin",
+    "price": 450,
+    "category": "Programming",
+    "imageURL": "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg",
+    "description": "A handbook of agile software craftsmanship.",
+    "publishedDate": "2008-08-01T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b46544502fb497d594e4cb",
+    "bookName": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "price": 550,
+    "category": "Programming",
+    "imageURL": "https://images-na.ssl-images-amazon.com/images/I/41as+WafrFL._SX380_BO1,204,203,200_.jpg",
+    "description": "Classic book on software craftsmanship and practical programming techniques.",
+    "publishedDate": "1999-10-20T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b4654f502fb497d594e4d4",
+    "bookName": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "price": 420,
+    "category": "Programming",
+    "imageURL": "https://images-na.ssl-images-amazon.com/images/I/81kqrwS1nNL.jpg",
+    "description": "Deep dive into JavaScript concepts and mechanics.",
+    "publishedDate": "2015-12-27T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b46561502fb497d594e4df",
+    "bookName": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen",
+    "price": 900,
+    "category": "Computer Science",
+    "imageURL": "https://images-na.ssl-images-amazon.com/images/I/61Mw06x2XcL.jpg",
+    "description": "Comprehensive textbook covering algorithms and data structures.",
+    "publishedDate": "2009-07-31T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b46579502fb497d594e4ea",
+    "bookName": "The Alchemist",
+    "author": "Paulo Coelho",
+    "price": 350,
+    "category": "Fiction",
+    "imageURL": "https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg",
+    "description": "A philosophical novel about following your dreams.",
+    "publishedDate": "1988-01-01T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b46583502fb497d594e4f5",
+    "bookName": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "price": 480,
+    "category": "Fantasy",
+    "imageURL": "https://images-na.ssl-images-amazon.com/images/I/81YOuOGFCJL.jpg",
+    "description": "The first book in the Harry Potter series.",
+    "publishedDate": "1997-06-26T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b4658d502fb497d594e500",
+    "bookName": "Atomic Habits",
+    "author": "James Clear",
+    "price": 500,
+    "category": "Self Help",
+    "imageURL": "https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg",
+    "description": "A guide to building good habits and breaking bad ones.",
+    "publishedDate": "2018-10-16T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b46598502fb497d594e509",
+    "bookName": "The 7 Habits of Highly Effective People",
+    "author": "Stephen Covey",
+    "price": 450,
+    "category": "Self Help",
+    "imageURL": "https://images-na.ssl-images-amazon.com/images/I/71m-MxdJ2WL.jpg",
+    "description": "Classic book on personal and professional effectiveness.",
+    "publishedDate": "1989-08-15T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b465a2502fb497d594e514",
+    "bookName": "Zero to One",
+    "author": "Peter Thiel",
+    "price": 430,
+    "category": "Business",
+    "imageURL": "https://images-na.ssl-images-amazon.com/images/I/71uAI28kJuL.jpg",
+    "description": "Insights on startups and building innovative companies.",
+    "publishedDate": "2014-09-16T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b465ac502fb497d594e51d",
+    "bookName": "The Lean Startup",
+    "author": "Eric Ries",
+    "price": 470,
+    "category": "Business",
+    "imageURL": "https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg",
+    "description": "Methodology for building successful startups.",
+    "publishedDate": "2011-09-13T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b465b6502fb497d594e528",
+    "bookName": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "price": 520,
+    "category": "History",
+    "imageURL": "https://images-na.ssl-images-amazon.com/images/I/713jIoMO3UL.jpg",
+    "description": "A brief history of humankind from ancient times to modern age.",
+    "publishedDate": "2011-01-01T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b4662d502fb497d594e535",
+    "bookName": "Five Point Someone",
+    "author": "Chetan Bhagat",
+    "price": 350,
+    "category": "Romance",
+    "imageURL": "https://covers.openlibrary.org/b/id/240726-L.jpg",
+    "description": "A story of three IIT students navigating friendship, love, and academic pressure.",
+    "publishedDate": "2004-01-01T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b4663b502fb497d594e53c",
+    "bookName": "Half Girlfriend",
+    "author": "Chetan Bhagat",
+    "price": 400,
+    "category": "Romance",
+    "imageURL": "https://covers.openlibrary.org/b/id/8231856-L.jpg",
+    "description": "A boy from Bihar falls in love with a girl from Delhi's elite society.",
+    "publishedDate": "2014-10-01T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b4664a502fb497d594e545",
+    "bookName": "Love and Other Words",
+    "author": "Christina Lauren",
+    "price": 410,
+    "category": "Romance",
+    "imageURL": "https://covers.openlibrary.org/b/id/11153238-L.jpg",
+    "description": "A deeply emotional second-chance love story.",
+    "publishedDate": "2018-04-10T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b46657502fb497d594e54e",
+    "bookName": "It Ends With Us",
+    "author": "Colleen Hoover",
+    "price": 450,
+    "category": "Romance",
+    "imageURL": "https://covers.openlibrary.org/b/id/8370225-L.jpg",
+    "description": "A powerful story about love, resilience, and difficult choices.",
+    "publishedDate": "2016-08-02T00:00:00.000Z",
+    "__v": 0
+  },
+  {
+    "_id": "69b46667502fb497d594e557",
+    "bookName": "The Girl in Room 105",
+    "author": "Chetan Bhagat",
+    "price": 420,
+    "category": "Thriller",
+    "imageURL": "https://covers.openlibrary.org/b/id/9251995-L.jpg",
+    "description": "A mystery thriller involving a murder investigation in an IIT campus.",
+    "publishedDate": "2018-10-01T00:00:00.000Z",
+    "__v": 0
+  }
 ]

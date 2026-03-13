@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import axios from 'axios';
+import { Component } from "react";
 import Aux from '../../hoc/Auxiliary';
 import AdminNav from '../Admin/AdminNav';
 import Services from '../../Others/Services';
 import Footer from '../../Others/Footer';
 import Auth from '../../Authentication/Auth';
+import { addCategory } from "../UserFunctions/UserFunctions";
  class AddCategory extends Component{
      state={
         Category: '',
@@ -25,13 +25,13 @@ import Auth from '../../Authentication/Auth';
      }
      submit=(event)=>{
          event.preventDefault();
-          axios.post(`http://localhost:4000/book/addCategory/${this.state.Category.toUpperCase()}`)
+          addCategory(this.state.Category.toUpperCase())
           .then((res) => {
             this.resetUserInputs();
              if(res.data.message===true){
                 this.setState({message:"Added"});
              }else{
-                this.setState({message:res.data.message}); 
+                this.setState({message:res.message}); 
              }
           })
           .catch((err) => {

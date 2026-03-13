@@ -93,3 +93,29 @@ export const getBookById=(id)=>{
         return res.data;
     }).catch((err)=>{return {message:err.message}});
 }
+export const addAuthor=(author)=>{
+    return Axios.post(`${API_BASE_URL}/book/addAuthor/`,author).then((res)=>{
+        return res.data;
+    }).catch((err)=>{return {message:err.message}});
+}
+export const addCategory=(category)=>{
+    return Axios.post(`${API_BASE_URL}/book/addCategory/${category}`).then((res)=>{
+        return res.data;
+    }).catch((err)=>{return {message:err.message}});
+}
+export const addToCart = (id, userName) => {
+  return Axios.post(`${API_BASE_URL}/cart/addBook?id=${id}&userName=${userName}`)
+    .then(res => res.data)
+    .catch(err => ({ message: err.message }));
+};
+export const getUser = (userName) => {
+  return Axios.get(`${API_BASE_URL}/user/getUser/${userName}`)
+    .then(res => res.data)
+    .catch(err => ({ message: err.message }));
+};
+
+export const updateUserDetails = (data) => {
+  return Axios.put(`${API_BASE_URL}/user/updateDetails`, data)
+    .then(res => res.data)
+    .catch(err => ({ message: err.message }));
+};

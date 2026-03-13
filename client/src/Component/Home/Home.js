@@ -11,7 +11,7 @@ import Footer from '../../Others/Footer';
 import {search} from '../UserFunctions/UserFunctions.js'
 import Banner from '../Banner/Banner.js';
 import Axios from 'axios';
-import {getCartItems,getBookByCategory,getBookByAuthor} from '../UserFunctions/UserFunctions.js';
+import {getCartItems,getBookByCategory,getBookByAuthor, addToCart, getBooks} from '../UserFunctions/UserFunctions.js';
 class Home extends React.Component{
     state={searchItem:"",books:[],display:true,result:[],message:"",displaySearch:true,count:0};
     constructor(props){

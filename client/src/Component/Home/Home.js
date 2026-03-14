@@ -28,18 +28,6 @@ class Home extends React.Component{
         event.preventDefault();
         this.setState({searchItem:event.target.value});
     }
-    
-    addToCartHandler=(id)=>{
-        console.log(id);
-        Axios.post(`http://localhost:4000/cart/addBook?id=${id}&userName=${this.auth.getUserName()}`).then((res)=>{    
-            if(res.data.message===true){
-                    this.props.history.push(`/shoppingcart`);               
-                }else{
-                    this.setState({message: `Unable to add to cart please try again later`});
-                    alert(this.state.message);
-                }
-            });
-    }
 
   addToCartHandler = (id) => {
     console.log(id);

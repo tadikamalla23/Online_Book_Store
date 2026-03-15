@@ -3,28 +3,50 @@ import "./Profile.css";
 import Aux from "../../hoc/Auxiliary.js";
 import { Link } from "react-router-dom";
 import { getUser } from "../UserFunctions/UserFunctions.js";
+
 class Profile extends React.Component {
   state = {
-    details: [],
+    details: {},
     message: "",
   };
+
   componentDidMount() {
-    getUser(this.props.userName).then(
-      (res) => {
-        console.log(res);
-        if (res.data) {
-          this.setState({ details: res[0] });
+    const userName = localStorage.getItem("userName");
+
+    getUser(userName)
+      .then((res) => {
+
+        if (Array.isArray(res) && res.length > 0) {
+          this.setState(
+            {
+              details: res[0],
+              message: "",
+            },
+            
+          );
         } else {
-          this.setState({ message: res.message });
+          this.setState({
+            details: {},
+            message: "User not found",
+          });
         }
-      },
-    );
+      })
+      .catch((err) => {
+        console.log("PROFILE ERROR:", err);
+        this.setState({
+          details: {},
+          message: "Unable to load profile",
+        });
+      });
   }
-  handleEdit = (id) => {
+
+  handleEdit = () => {
     this.props.history.push("/editDetails");
   };
+
   render() {
-    let data = this.state.details || {};
+    const data = this.state.details || {};
+
     return (
       <Aux>
         <Link
@@ -43,6 +65,7 @@ class Profile extends React.Component {
             }}
           ></i>
         </Link>
+
         <div
           className="modal"
           id="profileModal"
@@ -67,26 +90,29 @@ class Profile extends React.Component {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
+
               <div className="modal-body">
-                <p>
-                  Name: {data.firstName} {data.lastName}
-                </p>
-                <p>User Name: {data.userName}</p>
-                <p>Phone Number: {data.phnNo}</p>
-                <p>
-                  Address: {data.address}
-                  {","}
-                  {data.state}
-                  {","}
-                  {data.city}
-                  {"."}
-                </p>
+                {this.state.message ? (
+                  <p>{this.state.message}</p>
+                ) : (
+                  <>
+                    <p>
+                      Name: {data.firstName || ""} {data.lastName || ""}
+                    </p>
+                    <p>User Name: {data.userName || ""}</p>
+                    <p>Phone Number: {data.phnNo || ""}</p>
+                    <p>
+                      Address: {data.address || ""},{data.state || ""},{data.city || ""}.
+                    </p>
+                  </>
+                )}
               </div>
+
               <div className="modal-footer">
                 <button
                   type="button"
-                  className="btn btn-success "
-                  onClick={() => this.handleEdit(data._id)}
+                  className="btn btn-success"
+                  onClick={this.handleEdit}
                 >
                   Edit Details
                 </button>
@@ -105,4 +131,5 @@ class Profile extends React.Component {
     );
   }
 }
+
 export default Profile;

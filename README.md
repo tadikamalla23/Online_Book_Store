@@ -8,20 +8,7 @@ Deployed using Vercel, Render, and MongoDB Atlas.
 
 🚀 Live Demo
 
-Frontend (Vercel)
-
 https://online-book-store-hazel-nine.vercel.app/
-
-Backend API (Render)
-
-https://online-book-store-5er4.onrender.com
-
-Example API endpoint
-
-Example API endpoint
-
-https://online-book-store-5er4.onrender.com/book/getBooks
-
 
 ⸻
 
@@ -128,13 +115,9 @@ Online_Book_Store
 
 ⚙️ Environment Variables
 
-Frontend (.env)
+Frontend (.env)---- REACT_APP_API_URL
 
-REACT_APP_API_URL= https://online-book-store-5er4.onrender.com
-
-Backend (.env)
-
-MONGO_URI= mongodb+srv://kavya:230997@cluster0.qv4ixbr.mongodb.net/?appName=Cluster0
+Backend (.env)---- MONGO_URI
 
 
 ⸻

@@ -166,6 +166,9 @@ GitHub: https://github.com/tadikamalla23
 
 📈 Future Improvements
 	•	Payment integration
+	
 	•	Order history
+	
 	•	Advanced book search
+	
 	•	Admin analytics dashboard

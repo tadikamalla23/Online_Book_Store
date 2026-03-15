@@ -100,16 +100,27 @@ Admin
 📂 Project Structure
 
 Online_Book_Store
+
 │
+
 ├── client
+
 │   ├── src
+
 │   └── public
+
 │
+
 ├── server
+
 │   ├── routes
+
 │   ├── models
+
 │   └── app.js
+
 │
+
 └── README.md
 
 

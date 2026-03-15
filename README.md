@@ -45,20 +45,26 @@ MongoDB Atlas
 
 Frontend
 	•	React
+	
 	•	Bootstrap
+	
 	•	Axios
+	
 	•	React Router
 
 Backend
 	•	Node.js
+	
 	•	Express.js
 
 Database
 	•	MongoDB Atlas
+	
 	•	Mongoose
 
 Deployment
 	•	Vercel (Frontend)
+	
 	•	Render (Backend)
 
 ⸻
@@ -67,17 +73,26 @@ Deployment
 
 User
 	•	Register / Login
+	
 	•	Browse books
+	
 	•	Search books
+	
 	•	View book details
+	
 	•	Add books to cart
+	
 	•	View user profile
 
 Admin
 	•	Add Authors
+	
 	•	Edit Authors
+	
 	•	Delete Authors
+	
 	•	Add Categories
+	
 	•	Add Books
 
 ⸻
